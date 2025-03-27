@@ -1,23 +1,52 @@
 import org.example.Stack;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StackTest {
+    private Stack stack, emptyStack;
+    private final static int[] arrayTest = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    @BeforeEach
+    void setStack(){
+        emptyStack = new Stack();
+        stack = new Stack();
+        for(int i = 0; i < 10; i++)
+            stack.push(i+1);
+    }
     @Test
-    void verifyIfEmpty(){
-        Stack stack = new Stack();
-        assertTrue(stack.isEmpty());
+    void shouldReturnTrueWhenEmpty(){
+        assertTrue(emptyStack.isEmpty());
     }
 
     @Test
-    void verifyTopOfStack(){
-        Stack stack = new Stack();
-        for(int i = 0; i < 10; i++)
-            stack.push(i+1);
+    void shouldReturnFalseWhenNotEmpty(){
+        stack.push(1);
+        assertFalse(stack.isEmpty());
+    }
 
-        int[] arrayTest = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
+    @Test
+    void shouldReturnTopOfStack(){
         assertEquals(stack.peek(), arrayTest[9]);
+    }
+
+    @Test
+    void throwsExceptionWhenPeekingEmptyStack(){
+        assertThrows(IllegalStateException.class, () -> emptyStack.peek());
+    }
+
+    @Test
+    void throwsExceptionWhenStackEmpty(){
+        assertThrows(IllegalStateException.class, () -> emptyStack.pop());
+    }
+
+    @Test
+    void shouldPushElementToStack(){
+        stack.push(11);
+        assertEquals(stack.peek(), 11);
+    }
+    @Test
+    void shouldReturnStackSize(){
+        assertEquals(arrayTest.length, stack.size());
     }
 
 
