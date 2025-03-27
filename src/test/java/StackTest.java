@@ -1,11 +1,11 @@
 import org.example.Stack;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StackTest {
     private Stack stack, emptyStack;
     private final static int[] arrayTest = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
     @BeforeEach
     void setStack(){
         emptyStack = new Stack();
@@ -13,6 +13,7 @@ public class StackTest {
         for(int i = 0; i < 10; i++)
             stack.push(i+1);
     }
+
     @Test
     void shouldReturnTrueWhenEmpty(){
         assertTrue(emptyStack.isEmpty());
@@ -48,6 +49,4 @@ public class StackTest {
     void shouldReturnStackSize(){
         assertEquals(arrayTest.length, stack.size());
     }
-
-
 }
