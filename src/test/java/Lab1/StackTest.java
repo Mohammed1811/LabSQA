@@ -1,4 +1,6 @@
-import org.example.Stack;
+package Lab1;
+
+import org.example.Lab1.Stack;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 

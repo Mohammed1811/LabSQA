@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Lab1;
 
 public class Stack {
     private int[] array;
