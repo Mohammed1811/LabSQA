@@ -1,0 +1,23 @@
+package org.example.Lab2;
+
+public class RomanNumeral {
+    public static String toRoman(int n) {
+        if (n < 1 || n > 3999) {
+            throw new IllegalArgumentException("n must be between 1 and 3999");
+        }
+        String[] symbols = {"M", "CM", "D", "CD", "C", "XC", "L", "XL",
+                "X", "IX", "V", "IV", "I"};
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4,
+                1};
+        StringBuilder sb = new StringBuilder();
+        // Strict inequality must be implemented in this loop (< instead of <=)
+        for (int i = 0; i < symbols.length; i++) {
+            // Non-strict inequality must be used in this loop (>= instead of >)
+            while (n >= values[i]) {
+                sb.append(symbols[i]);
+                n -= values[i];
+            }
+        }
+        return sb.toString();
+    }
+}

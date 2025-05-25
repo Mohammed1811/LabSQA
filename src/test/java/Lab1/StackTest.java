@@ -23,13 +23,12 @@ public class StackTest {
 
     @Test
     void shouldReturnFalseWhenNotEmpty(){
-        stack.push(1);
         assertFalse(stack.isEmpty());
     }
 
     @Test
     void shouldReturnTopOfStack(){
-        assertEquals(stack.peek(), arrayTest[9]);
+        assertEquals(arrayTest[9], stack.peek());
     }
 
     @Test
@@ -45,7 +44,7 @@ public class StackTest {
     @Test
     void shouldPushElementToStack(){
         stack.push(11);
-        assertEquals(stack.peek(), 11);
+        assertEquals(11, stack.peek());
     }
     @Test
     void shouldReturnStackSize(){

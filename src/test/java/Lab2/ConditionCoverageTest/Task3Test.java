@@ -4,7 +4,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Task3Test {
-    private static final int[] ARRAY = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public static final int[] ARRAY = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     @Test
     public void shouldThrowExceptionWhenArrayIsNull(){
@@ -12,8 +12,23 @@ public class Task3Test {
     }
 
     @Test
+    public void shouldNotThrowExceptionWhenArrayIsNotNull(){
+        assertDoesNotThrow(() -> BinarySearch.binarySearch(ARRAY, 3));
+    }
+    @Test
+    public void shouldReturnElementFromLowerMiddle(){
+        int index = BinarySearch.binarySearch(ARRAY, 1);
+        assertEquals(1, ARRAY[index]);
+    }
+
+    @Test
+    public void shouldReturnElementFromUpperMiddle(){
+        int index = BinarySearch.binarySearch(ARRAY, 10);
+        assertEquals(10, ARRAY[index]);
+    }
+
+    @Test
     public void shouldReturnMinusOneWhenElementNotInArray(){
         assertEquals(-1, BinarySearch.binarySearch(ARRAY, 11));
     }
-
 }

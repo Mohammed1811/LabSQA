@@ -10,11 +10,6 @@ public class Task2Test {
     }
 
     @Test
-    public void shouldNotThrowExceptionWhenArgumentsNotNull(){
-        assertDoesNotThrow(() -> Anagram.isAnagram("arg", "args"));
-    }
-
-    @Test
     public void shouldReturnFalseWhenStringLengthIsDifferent(){
         assertFalse(Anagram.isAnagram("dog", "doge"));
     }

@@ -10,11 +10,6 @@ public class Task1Test {
     }
 
     @Test
-    public void shouldNotThrowExceptionWhenStrNotNull(){
-        assertDoesNotThrow(() -> Palindrome.isPalindrome("No exception should be thrown..."));
-    }
-
-    @Test
     public void shouldReturnTrueWhenPalindrome(){
         assertTrue(Palindrome.isPalindrome("Esope reste ici et se repose"));
     }

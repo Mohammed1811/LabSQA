@@ -1,11 +1,10 @@
 package Lab3;
-import org.example.Lab3.Calculatrice;
+import org.example.Lab3.Task1.Calculatrice;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.*;
@@ -41,6 +40,7 @@ public class CalculatriceTest {
         // TODO : Vérification de l'état de l'objet après l'appel de la
         //méthode "additionner", penser à utiliser la méthode
         //« getState() » de la directive « verify » : // exemple : verify(objet).getState();
-        // Response: There is no such method as getState() in verify()
+        // Response: There is no such method as getState() in verify(),
+        // the only way to have it is to add it to the class...
     }
 }

@@ -1,4 +1,4 @@
-package org.example.Lab3;
+package org.example.Lab3.Task2;
 
 public class Utilisateur {
     private String nom, prénom, email;

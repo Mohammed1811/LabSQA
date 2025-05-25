@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FibonacciTest {
     @Test
     void shouldReturnCorrectFibonacciTerm(){
-        assertEquals(Fibonacci.fibonacci(8), 21);
+        assertEquals(21, Fibonacci.fibonacci(8));
     }
 
     @Test

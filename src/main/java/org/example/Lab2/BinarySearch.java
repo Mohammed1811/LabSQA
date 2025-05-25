@@ -7,11 +7,15 @@ public class BinarySearch {
         }
         int low = 0;
         int high = array.length - 1;
-        while (low < high) {
+        // The comparison must be less strict (<=) to
+        // ensure both the pointers meet on the right element.
+        // Strict comparison fails when choosing the
+        // 1st and last element.
+        while (low <= high) {
             int mid = (low + high) / 2;
             if (array[mid] == element) {
                 return mid;
-            } else if (array[mid] <= element) {
+            } else if (array[mid] < element) {
                 low = mid + 1;
             } else {
                 high = mid - 1;

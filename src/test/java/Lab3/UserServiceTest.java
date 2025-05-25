@@ -1,8 +1,8 @@
 package Lab3;
-import org.example.Lab3.ServiceException;
-import org.example.Lab3.UserService;
-import org.example.Lab3.Utilisateur;
-import org.example.Lab3.UtilisateurApi;
+import org.example.Lab3.Task2.ServiceException;
+import org.example.Lab3.Task2.UserService;
+import org.example.Lab3.Task2.Utilisateur;
+import org.example.Lab3.Task2.UtilisateurApi;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;

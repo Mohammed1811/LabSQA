@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class FactorialTest {
     @Test
     void shouldReturnCorrectResult(){
-        assertEquals(Factorial.factorial(6), 720);
+        assertEquals(720, Factorial.factorial(6));
     }
 
     @Test
