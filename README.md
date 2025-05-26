@@ -1,7 +1,7 @@
 # Overview
 This repository contains code snippets of each lab, seperated in distinct packages (Each package labeled with the lab name), but all in the same project.
 
-This README also includes some of the corrections in the original classes of Lab 1 (As requested in the lab itself).
+This README also includes some of the corrections in the original classes of Lab 2 (As requested in the lab itself).
 
 
 
